@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form designing</title>
+</head>
+<style>
+    body{
+        background: gold;
+    }
+    div{
+        color: aqua;
+        background: red;
+        background-color: blue;
+        margin: 15px;
+        padding: 20px;
+       
+        border-radius: 10px;
+        border: 4px solid rgb(19, 199, 13);
+    }
+    div:hover {
+        background-color: brown;
+    }
+    input{
+        border-radius: 4px;
+        border-color: black;
+        
+    }
+    input[type]:hover {
+        color: rgb(255, 0, 200);
+        background: rgb(69, 236, 18);
+    }
+    label{
+        color: aliceblue;
+    }
+    
+   
+</style>
+<body>
+    <center>
+        <div>
+    <form action="" name="myform" method="post" onsubmit="return validate_form()">
+        <label for="">
+          Candidate Name : <input type="text" name="name"><br><br>
+        </label>
+        <label for="">
+          Father's Name : <input type="text" name="father'sname"><br><br>
+        </label>
+        
+        <label for="">
+            Email : <input type="email" name="email"><br><br>
+        </label>
+        <label for="">
+            Mobile no : <input type="mobile no" name="Mobile no"><br><br>
+        </label>
+        <label for="">
+            Age : <input type="number" name="Age"><br><br>
+        </label>
+        <label for="">
+            Password : <input type="password" name="password1"><br><br>
+        </label>
+        <label for="">
+            Confirm Password : <input type="password" name="password2"><br><br>
+        </label>
+        <label for="">
+            Password Show/Hide: <input type="radio" name="Show/Hide"><br><br>
+        </label>
+        <input type="submit" name="SUBMIT">
+    </form>
+       </div>
+    </center>
+    <script>
+        function validate_form(){
+            let name = document.myform.name.value;
+            if(name==null || name==""){
+                alert("Name can't be blank");
+                return false;
+            }
+            let x=document.myform.email.value;
+            let atposition = x.indexOf("@");
+            let dotposition = x.lastIndexOf(".");
+            if(atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length){
+                alert("Please Enter a valid email address");
+                return false;
+            }
+            let firstpassword = document.myform.password1.value;
+            let secondpassword = document.myform.password2.value;
+            if(firstpassword==secondpassword){
+                let pattern =/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/g;
+                let pass = document.myform.password1.value;
+                let t = pattern.test(pass);
+                if(t==true){
+                    return true;
+                }else{
+                    alert("Weak password");
+                    return false;
+                }   
+                return true;
+            }else{
+                alert("password must be same!");
+                return false;
+            }
+
+
+        }
+    </script>
+</body>
+</html>

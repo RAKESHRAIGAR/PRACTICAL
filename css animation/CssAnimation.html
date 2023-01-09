@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS ANIMATION</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .box{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            display: flex;
+        }
+        .box span:nth-child(even){
+            height:10px;
+            width:10px;
+            border-radius: 50%;
+            background-color: red;
+            margin: 0.5rem;
+            animation:bounce 1s linear infinite;
+            transition: 0.5s;
+            box-shadow: 0 0 5px #fff,
+                        0 0 5px rgb(241, 14, 33);
+        }
+        .box span:nth-child(odd){
+            height:10px;
+            width:10px;
+            border-radius: 50%;
+            background-color: rgb(92, 180, 19);
+            margin: 0.5rem;
+            animation:bounce2 1s linear infinite;
+            transition: 0.5s;
+            box-shadow: 0 0 5px #fff,
+                        0 0 5px rgb(92, 180, 19);
+        }
+        h1{
+            text-align: center;
+            position: absolute;
+            top: 46%;
+            left: 34%;
+            animation: bounce3  1s linear infinite;
+            
+            font-family: Verdana, Geneva, Tahoma, sans-serif; 
+        }
+        .box1 (text):nth-child(even){
+            animation:bounce4 1s linear infinite;
+        }
+        .box1 (text):nth-child(odd){
+            animation:bounce5 1s linear infinite;
+        }
+       
+        img{
+            top: 25%;
+            left: 50%;
+            position: absolute;
+            animation: bounce3  1s linear infinite;
+        }
+        @keyframes bounce{
+            0%{
+                margin-top: 0rem;
+            }
+            20%{
+                margin-top: -0.5rem;
+            }
+            40%{
+                margin-top: -1rem;
+            }
+            60%{
+                margin-top: -0.5rem;
+            }
+            100%{
+                margin-top: 0rem;
+            }
+        }
+        @keyframes bounce2{
+            0%{
+                margin-top: 0rem;
+            }
+            20%{
+                margin-top: -1rem;
+            }
+            40%{
+                margin-top: 0rem;
+            }
+            60%{
+                margin-top: -0.5rem;
+            }
+            100%{
+                margin-top: 0rem;
+            }
+        }
+        @keyframes bounce3{
+            0%{
+                margin-top: 0rem;
+            }
+            20%{
+                margin-top: -1rem;
+            }
+            40%{
+                margin-top: 0rem;
+            }
+            60%{
+                margin-top: -0.5rem;
+            }
+            100%{
+                margin-top: 0rem;
+            }
+        }
+        @keyframes bounce4{
+            0%{
+                margin-top: 0rem;
+            }
+            20%{
+                margin-top: -0.5rem;
+            }
+            40%{
+                margin-top: -1rem;
+            }
+            60%{
+                margin-top: -0.5rem;
+            }
+            100%{
+                margin-top: 0rem;
+            }
+        }
+        @keyframes bounce5{
+            0%{
+                margin-top: 0rem;
+            }
+            20%{
+                margin-top: -1rem;
+            }
+            40%{
+                margin-top: 0rem;
+            }
+            60%{
+                margin-top: -0.5rem;
+            }
+            100%{
+                margin-top: 0rem;
+            }
+        }  
+    </style>
+</head>
+<body>
+    <img src="images/SUKHEN1.jpg" width="5%" alt="">
+    <h1 class="box1">Loading</h1>
+    <div class="box">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</body>
+</html>

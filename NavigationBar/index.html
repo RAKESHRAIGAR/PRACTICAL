@@ -7,7 +7,60 @@
     <title>Navigation Bar</title>
     <style type="text/css">
         *{
-            
+          margin: 0;
+          padding: 0;
+          font-family: Verdana, Geneva, Tahoma, sans-serif;
+          box-sizing: border-box;  
+        }
+        .menu > ul{
+            background-color: blue;
+        }
+        .menu ul{
+            float: left;
+            padding: 0;
+            margin: 0;
+            position:relative;
+            list-style: none;
+        }
+        .menu ul a{
+            display: block;
+            font-weight: bold;
+            padding: 12px 28px;
+            line-height: 32px;
+            font-size: 15px;
+            text-decoration: none;
+            color: wheat;
+        }
+        .menu ul li{
+            padding: 0;
+            margin: 0;
+            position: relative;
+            float: left;
+        }
+        .menu ul li:hover{
+            background-color: rgb(18, 10, 133);
+        }
+        .menu ul ul{
+            position: absolute;
+            background-color: blue;
+            top: 100%;
+            left: 0;
+            display: none;
+        }
+        .menu ul ul li{
+            border-left: 3px solid rgb(3, 3, 71);
+            width: 200px;
+            float: none;
+        }
+        .menu ul ul li:hover{
+            border-left: 3px solid rgb(3, 3, 71); 
+        }
+        .menu ul ul ul{
+            top: -4px;
+            left: 100%;
+        }
+        .menu ul li:hover > ul{
+            display: block;
         }
     </style>
 </head>

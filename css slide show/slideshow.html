@@ -16,8 +16,32 @@
         }
         .box{
             background-image: url(images/SUKHEN1.jpg);
-            height: 499px;
-            
+            height: 400px;
+            width: 600px;
+            border-radius: 30px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 0 0 10px #fff;
+            animation: animate 10s infinite;
+            transition: 0.5s;  
+        }
+        @keyframes animate{
+            25%{
+                background-image: url("images/SUKHEN1.jpg");
+            }
+            50%{
+                background-image: url("images/SUKHEN1.jpg");
+            }
+            75%{
+                background-image: url("images/SUKHEN1.jpg");
+            }
+            100%{
+                background-image: url("images/SUKHEN1.jpg");
+            }
         }
     </style>
 </head>

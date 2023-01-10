@@ -1,0 +1,78 @@
+<style type="text/css">
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background-color: #ff9;
+}
+.box{
+    border: 2px solid rebeccapurple;
+    position: absolute;
+    border-radius: 20px;
+    margin: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 400px;
+    padding: 20px;
+    background-image: linear-gradient(to bottom right, rgb(139, 2, 110),#6600cc);
+}
+h2{
+    text-align: center;
+    padding: 25px 0;
+    font-size: 28px;
+    color: white;
+}
+input[type="email"]{
+    margin-bottom: 20px;
+}
+input[type="email"], input[type="password"]{
+    width: 100%;
+    padding: 12px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+}
+input[type="email"]::placeholder, input[type="password"]::placeholder{
+    font-size: 14px;
+    color: black;
+}
+input[type="checkbox"]{
+    height: 18px;
+    width: 18px;
+    margin: 5px;
+}
+input[type="submit"]{
+    width: 100%;
+    padding: 12px;
+    background-color: green;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+}
+input[type="submit"]:hover{
+    background-color: orange;
+    color: black;
+    transition: 0.5s;
+}
+a{
+    color: white;
+    padding: 0 20px;
+}
+a:hover{
+    color: aqua;
+}
+.forgot{
+    padding: 10px;
+    color: white;
+    justify-content: space-around;
+}
+.log{
+    padding: 10px;
+}
+</style>

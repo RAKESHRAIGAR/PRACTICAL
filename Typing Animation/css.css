@@ -1,0 +1,40 @@
+body{
+    background-color: red;
+}
+.box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+}
+.box h1{
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto;
+}
+h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 80px;
+    color: white;
+    border-right: .15em solid yellow;
+    animation: typing 3.5s steps(20, end),
+                blink .5s step-end infinite;
+}
+@keyframes typing{
+    from{
+        width: 0;
+    }
+    to{
+        width: 100%;
+    }
+}
+@keyframes blink{
+    from, to{
+        border-color: transparent;
+    }
+    50%{
+        border-color: rgb(64, 233, 22);
+    }
+}

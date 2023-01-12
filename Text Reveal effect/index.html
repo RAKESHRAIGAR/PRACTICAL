@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Reveal effect</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        body{
+            background-color: aqua;
+        }
+        .box{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: wheat;
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            text-align: center;
+        }
+        .box h1{
+            color: blue;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: none;
+        }
+        .box:hover{
+            width: 300px;
+            height: 100px;
+            border-radius: 0;
+            transition: 0.5s;
+            cursor: pointer;
+        }
+        .box:hover h1{
+            display: block;
+            transition: 0.5s;
+        }
+        .box h2{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .box:hover h2{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>AWESOME</h1>
+        <h2>HOVER ME</h2>
+    </div>
+</body>
+</html>
